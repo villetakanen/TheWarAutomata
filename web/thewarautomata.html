@@ -9,16 +9,36 @@
     <script async type="application/dart" src="thewarautomata.dart"></script>
     <script async src="packages/browser/dart.js"></script>
     
+    <script src="packages/web_components/platform.js"></script>
+  <script src="packages/web_components/dart_support.js"></script>
+    
+    <link rel="import" href="packages/paper_elements/paper_input.html">
+    
+    <link rel="import" href="packages/core_elements/core_scaffold.html">
+    <link rel="import" href="packages/core_elements/core_header_panel.html">
+    <link rel="import" href="packages/core_elements/core_toolbar.html">
+    <link rel="import" href="packages/core_elements/core_menu.html">
+    <link rel="import" href="packages/core_elements/core_item.html">
+    
+    <link rel="stylesheet" href="theme.css">
     <link rel="stylesheet" href="thewarautomata.css">
+    
   </head>
-  <body>
-    <h1>TheWarAutomata</h1>
-    
-    <p>Hello world from Dart!</p>
-    
-    <div id="sample_container_id">
-      <p id="sample_text_id">Click me!</p>
-    </div>
+  <body fullbleed unresolved>
 
+  
+    <core-scaffold>
+      <core-header-panel navigation flex mode="seamed">
+        <core-toolbar id="navheader">
+          <span>The War Automata</span>
+        </core-toolbar>
+        <core-menu>
+          <core-item icon="settings" label="item1"></core-item>
+        </core-menu>
+   
+      </core-header-panel>
+      <div tool>Active game with seed <span id="game_seed">Seed</span></div>
+      <div></div>
+  </core-scaffold>
   </body>
 </html>
